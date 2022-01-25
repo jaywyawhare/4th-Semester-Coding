@@ -1,0 +1,16 @@
+For single comment line use #
+For Multiple comment line use << /
+
+Relationship Operator
+less than (-lt)
+greater than (-gt)
+equal to (-eq)
+
+Logical Operator
+And (&&)
+Or (||)
+
+give space after [ and before ] like [ a ]
+
+try expr ` directly inside echo
+

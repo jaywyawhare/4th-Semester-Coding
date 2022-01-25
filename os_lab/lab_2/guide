@@ -1,0 +1,15 @@
+cat>a	: To remove given info and add another thing i.e. format 
+cat>>a	: Edit at end i.e. Append
+mv a b	: Rename
+mv 	: can be used to move file 
+cp 	: Used to copy file 
+cp -r	: Copy and rename
+head	: First 10 lines
+tail 	: Last 10 lines
+rmdir	: Remove empty directory
+rm -r	: Remove non-empty directory
+Global Search regex printout = Grep
+grep	: To search a string from file
+read	: To take input from terminal [will saved into $REPLY variable; use like echo $REPLY]
+echo	: To write something on terminal
+chmod 	: Changing the permissions 

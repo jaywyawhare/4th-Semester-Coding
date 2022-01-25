@@ -1,0 +1,7 @@
+Frames divides page into panes / windows
+Each frame can be regarded as website
+Each fame can be accessed by different url
+
+
+    iframe is tag 
+    

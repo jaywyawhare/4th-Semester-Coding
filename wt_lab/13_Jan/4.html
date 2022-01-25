@@ -1,0 +1,100 @@
+<!-- Example - 2 Create a web page using Ordered, Unordered, Directory and Nested List which will display the output as follows:
+• Coffee 
+• Tea 
+• Milk
+
+A. Coffee
+B. Tea
+C. Milk
+
+(Square)Coffee 
+(Square)Tea 
+(Square)Milk
+
+° Coffee 
+° Tea 
+° Milk
+
+3. Coffee
+4. Tea
+5. Milk
+
+i. Coffee 
+ii. Tea 
+iii. Milk
+
+Coffee
+    - black hot drink
+Milk
+    - white cold drink
+
+• Item A 
+• Item B 
+    ° Subtem B.1 ° Subitem B.2
+• Item C -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WT</title>
+</head>
+<body>
+
+    <UL>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </UL>
+
+    <Ul style="list-style-type: circle;">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </Ul>
+
+    <Ul style="list-style-type: square;">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </Ul>
+
+    <OL START=1 TYPE="A">
+        <LI>Coffee</LI>
+        <LI>Milk</LI>
+        <Li>Tea</Li>
+
+    </OL>
+
+    <OL START=3 TYPE="1">
+        <LI>Coffee</LI>
+        <LI>Milk</LI>
+        <Li>Tea</Li>
+
+    </OL>
+    <OL START=1 TYPE="i">
+        <LI>Coffee</LI>
+        <LI>Milk</LI>
+        <Li>Tea</Li>
+
+    </OL>
+    <dir>Coffee
+    	<li type="none">-black hot drink</li></dir>
+    	<dir>Milk
+    	<li type="none">-white cold drink</li>
+    </dir>
+    <ul>
+        <li>Item A</li>
+        <li>Item B
+            <ul>
+                <li>Subitem B.1</li>
+                <li>Subitem B.2</li>
+            </ul>
+        </li>
+        <li>Item C</li>
+    </ul>
+    
+</body>
+</html>                                                                                                               

@@ -1,0 +1,10 @@
+Add using shell
+Sub using shell
+Mul using shell
+Divide using shell
+Modulus using shell
+
+Assignment :
+	To write  all arithmatic, logical and relational operator in bash file
+	Leap Year
+	
