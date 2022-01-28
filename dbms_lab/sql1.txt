@@ -1,0 +1,95 @@
+SQL> CREATE TABLE STUDENTS(Roll NUMBER(6), Name
+  2  VARCHAR2(20), Gender CHAR(1), Age NUMBER(3), CGPA
+  3  NUMBER(4,2));
+
+Table created.
+
+SQL> INSERT INTO STUDENTS(Roll, Name, Gender, Age, CGPA) VALUES (705129, 'Uday','M', 19, 9.2);
+
+1 row created.
+
+SQL> INSERT INTO STUDENTS VALUES (705129, 'Uday', 'M', 19, 9.2);
+
+1 row created.
+
+SQL> INSERT INTO STUDENTS(Roll, Name, CGPA) VALUES (705129, 'Uday', 9.2);
+
+1 row created.
+
+SQL> INSERT INTO STUDENTS VALUES (&Roll, '&Name', '&Gender', &Age, &CGPA);
+Enter value for roll: 01
+Enter value for name: A
+Enter value for gender: M
+Enter value for age: 02
+Enter value for cgpa: 6.9
+old   1: INSERT INTO STUDENTS VALUES (&Roll, '&Name', '&Gender', &Age, &CGPA)
+new   1: INSERT INTO STUDENTS VALUES (01, 'A', 'M', 02, 6.9)
+
+1 row created.
+
+SQL> INSERT INTO STUDENTS (Roll, Name, Gender, Age) VALUES(&Roll, '&Name', '&Gender', &Age);
+Enter value for roll: 02
+Enter value for name: B
+Enter value for gender: F
+Enter value for age: 06
+old   1: INSERT INTO STUDENTS (Roll, Name, Gender, Age) VALUES(&Roll, '&Name', '&Gender', &Age)
+new   1: INSERT INTO STUDENTS (Roll, Name, Gender, Age) VALUES(02, 'B', 'F', 06)
+
+1 row created.
+
+SQL> DESCRIBE STUDENTS;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ROLL                                               NUMBER(6)
+ NAME                                               VARCHAR2(20)
+ GENDER                                             CHAR(1)
+ AGE                                                NUMBER(3)
+ CGPA                                               NUMBER(4,2)
+
+SQL> Select *from STUDENTS;
+
+      ROLL NAME                 G        AGE       CGPA                         
+---------- -------------------- - ---------- ----------                         
+    705129 Uday                 M         19        9.2                         
+    705129 Uday                 M         19        9.2                         
+    705129 Uday                                     9.2                         
+         1 A                    M          2        6.9                         
+         2 B                    F          6                                    
+
+SQL> commit;
+
+Commit complete.
+
+SQL> DESCRIBE STUDENTS;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ROLL                                               NUMBER(6)
+ NAME                                               VARCHAR2(20)
+ GENDER                                             CHAR(1)
+ AGE                                                NUMBER(3)
+ CGPA                                               NUMBER(4,2)
+
+SQL> Select *from STUDENTS;
+
+      ROLL NAME                 G        AGE       CGPA                         
+---------- -------------------- - ---------- ----------                         
+         1 Unnamed              M         19        9.2                         
+         2 Stranger             M         19        9.1                         
+         3 Myth                 M         19        9.4                         
+         4 Tom                  M          2        6.9                         
+         5 Jerry                M          2         10                         
+
+SQL> cl scr
+
+SQL> Select *from STUDENTS;
+
+      ROLL NAME                 G        AGE       CGPA                         
+---------- -------------------- - ---------- ----------                         
+         1 Unnamed              M         19        9.2                         
+         2 Stranger             M         19        9.1                         
+         3 Myth                 M         19        9.4                         
+         4 Tom                  M          2        6.9                         
+         5 Jerry                M          2         10                         
+
+SQL> spool off;
+

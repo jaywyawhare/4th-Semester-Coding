@@ -1,0 +1,554 @@
+
+SQL> create table Students(Roll number(4),Name varchar(30),City varchar(30),Age number(2),CGPA number(3,2));
+
+Table created.
+
+SQL> desc Students;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ROLL                                               NUMBER(4)
+ NAME                                               VARCHAR2(30)
+ CITY                                               VARCHAR2(30)
+ AGE                                                NUMBER(2)
+ CGPA                                               NUMBER(3,2)
+
+SQL> insert into Students values(101,'Ram','Bhubaneshwer',19,9.0);
+
+1 row created. 
+
+SQL>  insert into Students(Roll,Name,City,CGPA) values(102,'Hari','Bhubaneshwer',6.7);
+
+1 row created.
+
+SQL> insert into Students values(103,'Uday','Jharkhand',20,8.97);
+
+1 row created.
+
+SQL> insert into Students values(104,'Vikas','Uttar Pradesh',19,8.5);
+
+1 row created.
+
+SQL> insert into Students values(105,'Shweta','Ranchi',19,9.2);
+
+1 row created.
+
+SQL> insert into Students values(106,'Yogesh','Rajasthan',18,7.9);
+
+1 row created.
+
+SQL> insert into Students values(210,'Smriti','Delhi',20,8.99);
+
+1 row created.
+
+SQL> insert into Students values(211,'Sudam','Cuttack',21,8.6);
+
+1 row created.
+
+SQL> insert into Students values(212,'Vikas','Kolkota',23,5.98);
+
+1 row created.
+
+SQL> insert into Students(Roll,Name,Age,CGPA) values(165,'Manish',19,9.15);
+
+1 row created.
+
+SQL> set linesize 250;
+SQL> select * from Students;
+
+      ROLL NAME                           CITY                                  AGE       CGPA                                                                                                                                                            
+---------- ------------------------------ ------------------------------ ---------- ----------                                                                                                                                                            
+       101 Ram                            Bhubaneshwer                           19          9                                                                                                                                                            
+       102 Hari                           Bhubaneshwer                                     6.7                                                                                                                                                            
+       103 Uday                           Jharkhand                              20       8.97                                                                                                                                                            
+       104 Vikas                          Uttar Pradesh                          19        8.5                                                                                                                                                            
+       105 Shweta                         Ranchi                                 19        9.2                                                                                                                                                            
+       106 Yogesh                         Rajasthan                              18        7.9                                                                                                                                                            
+       210 Smriti                         Delhi                                  20       8.99                                                                                                                                                            
+       211 Sudam                          Cuttack                                21        8.6                                                                                                                                                            
+       212 Vikas                          Kolkota                                23       5.98                                                                                                                                                            
+       165 Manish                                                                19       9.15                                                                                                                                                            
+
+10 rows selected.
+
+SQL> select Roll,CGPA from Students;
+
+      ROLL       CGPA                                                                                                                                                                                                                                     
+---------- ----------                                                                                                                                                                                                                                     
+       101          9                                                                                                                                                                                                                                     
+       102        6.7                                                                                                                                                                                                                                     
+       103       8.97                                                                                                                                                                                                                                     
+       104        8.5                                                                                                                                                                                                                                     
+       105        9.2                                                                                                                                                                                                                                     
+       106        7.9                                                                                                                                                                                                                                     
+       210       8.99                                                                                                                                                                                                                                     
+       211        8.6                                                                                                                                                                                                                                     
+       212       5.98                                                                                                                                                                                                                                     
+       165       9.15                                                                                                                                                                                                                                     
+
+10 rows selected.
+
+SQL> select distinct City from Students;
+
+CITY                                                                                                                                                                                                                                                      
+------------------------------                                                                                                                                                                                                                            
+Uttar Pradesh                                                                                                                                                                                                                                             
+Ranchi                                                                                                                                                                                                                                                    
+Delhi                                                                                                                                                                                                                                                     
+Jharkhand                                                                                                                                                                                                                                                 
+Bhubaneshwer                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                          
+Cuttack                                                                                                                                                                                                                                                   
+Rajasthan                                                                                                                                                                                                                                                 
+Kolkota                                                                                                                                                                                                                                                   
+
+9 rows selected.
+
+SQL> select Name,Age,Age+3 from Students;
+
+NAME                                  AGE      AGE+3                                                                                                                                                                                                      
+------------------------------ ---------- ----------                                                                                                                                                                                                      
+Ram                                    19         22                                                                                                                                                                                                      
+Hari                                                                                                                                                                                                                                                      
+Uday                                   20         23                                                                                                                                                                                                      
+Vikas                                  19         22                                                                                                                                                                                                      
+Shweta                                 19         22                                                                                                                                                                                                      
+Yogesh                                 18         21                                                                                                                                                                                                      
+Smriti                                 20         23                                                                                                                                                                                                      
+Sudam                                  21         24                                                                                                                                                                                                      
+Vikas                                  23         26                                                                                                                                                                                                      
+Manish                                 19         22                                                                                                                                                                                                      
+
+10 rows selected.
+
+SQL> select Name,Age,Age+3"Passing Age" from Students;
+
+NAME                                  AGE Passing Age                                                                                                                                                                                                     
+------------------------------ ---------- -----------                                                                                                                                                                                                     
+Ram                                    19          22                                                                                                                                                                                                     
+Hari                                                                                                                                                                                                                                                      
+Uday                                   20          23                                                                                                                                                                                                     
+Vikas                                  19          22                                                                                                                                                                                                     
+Shweta                                 19          22                                                                                                                                                                                                     
+Yogesh                                 18          21                                                                                                                                                                                                     
+Smriti                                 20          23                                                                                                                                                                                                     
+Sudam                                  21          24                                                                                                                                                                                                     
+Vikas                                  23          26                                                                                                                                                                                                     
+Manish                                 19          22                                                                                                                                                                                                     
+
+10 rows selected.
+
+
+SQL> select Name||''||City from Students;
+
+NAME||''||CITY                                                                                                                                                                                                                                            
+------------------------------------------------------------                                                                                                                                                                                              
+RamBhubaneshwer                                                                                                                                                                                                                                           
+HariBhubaneshwer                                                                                                                                                                                                                                          
+UdayJharkhand                                                                                                                                                                                                                                             
+VikasUttar Pradesh                                                                                                                                                                                                                                        
+ShwetaRanchi                                                                                                                                                                                                                                              
+YogeshRajasthan                                                                                                                                                                                                                                           
+SmritiDelhi                                                                                                                                                                                                                                               
+SudamCuttack                                                                                                                                                                                                                                              
+VikasKolkota                                                                                                                                                                                                                                              
+Manish                                                                                                                                                                                                                                                    
+
+10 rows selected.
+
+SQL> select Name||''||City as "Address" from Students;
+
+Address                                                                                                                                                                                                                                                   
+------------------------------------------------------------                                                                                                                                                                                              
+RamBhubaneshwer                                                                                                                                                                                                                                           
+HariBhubaneshwer                                                                                                                                                                                                                                          
+UdayJharkhand                                                                                                                                                                                                                                             
+VikasUttar Pradesh                                                                                                                                                                                                                                        
+ShwetaRanchi                                                                                                                                                                                                                                              
+YogeshRajasthan                                                                                                                                                                                                                                           
+SmritiDelhi                                                                                                                                                                                                                                               
+SudamCuttack                                                                                                                                                                                                                                              
+VikasKolkota                                                                                                                                                                                                                                              
+Manish                                                                                                                                                                                                                                                    
+
+10 rows selected.
+
+SQL> select * from Students where city='Bhubaneshwer';
+
+      ROLL NAME                           CITY                                  AGE       CGPA                                                                                                                                                            
+---------- ------------------------------ ------------------------------ ---------- ----------                                                                                                                                                            
+       101 Ram                            Bhubaneshwer                           19          9                                                                                                                                                            
+       102 Hari                           Bhubaneshwer                                     6.7                                                                                                                                                            
+
+ 
+SQL> select Name from Students where Age is NULL;
+
+NAME                                                                                                                                                                                                                                                      
+------------------------------                                                                                                                                                                                                                            
+Hari                                                                                                                                                                                                                                                      
+
+
+
+SQL> select * from Students order by age;
+
+      ROLL NAME                           CITY                                  AGE       CGPA                                                                                                                                                            
+---------- ------------------------------ ------------------------------ ---------- ----------                                                                                                                                                            
+       106 Yogesh                         Rajasthan                              18        7.9                                                                                                                                                            
+       101 Ram                            Bhubaneshwer                           19          9                                                                                                                                                            
+       105 Shweta                         Ranchi                                 19        9.2                                                                                                                                                            
+       165 Manish                                                                19       9.15                                                                                                                                                            
+       104 Vikas                          Uttar Pradesh                          19        8.5                                                                                                                                                            
+       210 Smriti                         Delhi                                  20       8.99                                                                                                                                                            
+       103 Uday                           Jharkhand                              20       8.97                                                                                                                                                            
+       211 Sudam                          Cuttack                                21        8.6                                                                                                                                                            
+       212 Vikas                          Kolkota                                23       5.98                                                                                                                                                            
+       102 Hari                           Bhubaneshwer                                     6.7                                                                                                                                                            
+
+10 rows selected.
+
+SQL> select * from Students order by CGPA,Age desc;
+
+      ROLL NAME                           CITY                                  AGE       CGPA                                                                                                                                                            
+---------- ------------------------------ ------------------------------ ---------- ----------                                                                                                                                                            
+       212 Vikas                          Kolkota                                23       5.98                                                                                                                                                            
+       102 Hari                           Bhubaneshwer                                     6.7                                                                                                                                                            
+       106 Yogesh                         Rajasthan                              18        7.9                                                                                                                                                            
+       104 Vikas                          Uttar Pradesh                          19        8.5                                                                                                                                                            
+       211 Sudam                          Cuttack                                21        8.6                                                                                                                                                            
+       103 Uday                           Jharkhand                              20       8.97                                                                                                                                                            
+       210 Smriti                         Delhi                                  20       8.99                                                                                                                                                            
+       101 Ram                            Bhubaneshwer                           19          9                                                                                                                                                            
+       165 Manish                                                                19       9.15                                                                                                                                                            
+       105 Shweta                         Ranchi                                 19        9.2                                                                                                                                                            
+
+10 rows selected.
+
+SQL> select * from Students order by 3;
+
+      ROLL NAME                           CITY                                  AGE       CGPA                                                                                                                                                            
+---------- ------------------------------ ------------------------------ ---------- ----------                                                                                                                                                            
+       101 Ram                            Bhubaneshwer                           19          9                                                                                                                                                            
+       102 Hari                           Bhubaneshwer                                     6.7                                                                                                                                                            
+       211 Sudam                          Cuttack                                21        8.6                                                                                                                                                            
+       210 Smriti                         Delhi                                  20       8.99                                                                                                                                                            
+       103 Uday                           Jharkhand                              20       8.97                                                                                                                                                            
+       212 Vikas                          Kolkota                                23       5.98                                                                                                                                                            
+       106 Yogesh                         Rajasthan                              18        7.9                                                                                                                                                            
+       105 Shweta                         Ranchi                                 19        9.2                                                                                                                                                            
+       104 Vikas                          Uttar Pradesh                          19        8.5                                                                                                                                                            
+       165 Manish                                                                19       9.15                                                                                                                                                            
+
+10 rows selected.
+
+
+SQL> select * from Students;
+
+      ROLL NAME                           CITY                                  AGE       CGPA                                                                                                                                                            
+---------- ------------------------------ ------------------------------ ---------- ----------                                                                                                                                                            
+       101 Ram                            Bhubaneshwer                           19          9                                                                                                                                                            
+       102 Hari                           Bhubaneshwer                                     6.7                                                                                                                                                            
+       103 Uday                           Jharkhand                              20       8.97                                                                                                                                                            
+       104 Vikas                          Uttar Pradesh                          19        8.5                                                                                                                                                            
+       105 Shweta                         Ranchi                                 19        9.2                                                                                                                                                            
+       106 Yogesh                         Rajasthan                              18        7.9                                                                                                                                                            
+       210 Smriti                         Delhi                                  20       8.99                                                                                                                                                            
+       211 Sudam                          Cuttack                                21        8.6                                                                                                                                                            
+       212 Vikas                          Kolkota                                23       5.98                                                                                                                                                            
+       165 Manish                                                                19       9.15                                                                                                                                                            
+
+10 rows selected.
+
+SQL> alter table Students add(Address number(20));
+
+Table altered.
+
+SQL> desc Students;
+ Name                                                                                           Null?    Type
+ -------------------------------------------------------------------------------------------- -------- ----------------------
+ ROLL                                                                                                    NUMBER(4)
+ NAME                                                                                                    VARCHAR2(30)
+ CITY                                                                                                    VARCHAR2(30)
+ AGE                                                                                                     NUMBER(2)
+ CGPA                                                                                                    NUMBER(3,2)
+ ADDRESS                                                                                                 NUMBER(20)
+
+SQL> alter table Students modify(Address varchar(20));
+
+Table altered.
+
+SQL> desc Students;
+ Name                                                                                           Null?    Type
+ -------------------------------------------------------------------------------------------- -------- ----------------------
+ ROLL                                                                                                    NUMBER(4)
+ NAME                                                                                                    VARCHAR2(30)
+ CITY                                                                                                    VARCHAR2(30)
+ AGE                                                                                                     NUMBER(2)
+ CGPA                                                                                                    NUMBER(3,2)
+ ADDRESS                                                                                                 VARCHAR(20)
+                          
+                                                                                                                            VARCHAR2(20)
+
+
+SQL> alter table Students rename column Roll to ID;
+
+Table altered.
+
+SQL> select * from Students;
+
+        ID NAME                           CITY                                  AGE       CGPA ADDRESS                                                                                                                                                    
+---------- ------------------------------ ------------------------------ ---------- ---------- --------------------                                                                                                                                       
+       101 Ram                            Bhubaneshwer                           19          9                                                                                                                                                            
+       102 Hari                           Bhubaneshwer                                     6.7                                                                                                                                                            
+       103 Uday                           Jharkhand                              20       8.97                                                                                                                                                            
+       104 Vikas                          Uttar Pradesh                          19        8.5                                                                                                                                                            
+       105 Shweta                         Ranchi                                 19        9.2                                                                                                                                                            
+       106 Yogesh                         Rajasthan                              18        7.9                                                                                                                                                            
+       210 Smriti                         Delhi                                  20       8.99                                                                                                                                                            
+       211 Sudam                          Cuttack                                21        8.6                                                                                                                                                            
+       212 Vikas                          Kolkota                                23       5.98                                                                                                                                                            
+       165 Manish                                                                19       9.15                                                                                                                                                            
+
+10 rows selected.
+
+SQL> select Address"Branch" from Students;
+
+Branch                                                                                                                                                                                                                                                    
+--------------------                                                                                                                                                                                                                                      
+                                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                          
+
+10 rows selected.
+
+
+SQL> select * from Students;
+
+        ID NAME                           CITY                                  AGE       CGPA ADDRESS                                                                                                                                                    
+---------- ------------------------------ ------------------------------ ---------- ---------- --------------------                                                                                                                                       
+       101 Ram                            Bhubaneshwer                           19          9                                                                                                                                                            
+       102 Hari                           Bhubaneshwer                                     6.7                                                                                                                                                            
+       103 Uday                           Jharkhand                              20       8.97                                                                                                                                                            
+       104 Vikas                          Uttar Pradesh                          19        8.5                                                                                                                                                            
+       105 Shweta                         Ranchi                                 19        9.2                                                                                                                                                            
+       106 Yogesh                         Rajasthan                              18        7.9                                                                                                                                                            
+       210 Smriti                         Delhi                                  20       8.99                                                                                                                                                            
+       211 Sudam                          Cuttack                                21        8.6                                                                                                                                                            
+       212 Vikas                          Kolkota                                23       5.98                                                                                                                                                            
+       165 Manish                                                                19       9.15                                                                                                                                                            
+
+10 rows selected.
+
+SQL> alter table Students rename column Address to Branch;
+
+Table altered.
+
+SQL> select * from Students;
+
+        ID NAME                           CITY                                  AGE       CGPA BRANCH                                                                                                                                                     
+---------- ------------------------------ ------------------------------ ---------- ---------- --------------------                                                                                                                                       
+       101 Ram                            Bhubaneshwer                           19          9                                                                                                                                                            
+       102 Hari                           Bhubaneshwer                                     6.7                                                                                                                                                            
+       103 Uday                           Jharkhand                              20       8.97                                                                                                                                                            
+       104 Vikas                          Uttar Pradesh                          19        8.5                                                                                                                                                            
+       105 Shweta                         Ranchi                                 19        9.2                                                                                                                                                            
+       106 Yogesh                         Rajasthan                              18        7.9                                                                                                                                                            
+       210 Smriti                         Delhi                                  20       8.99                                                                                                                                                            
+       211 Sudam                          Cuttack                                21        8.6                                                                                                                                                            
+       212 Vikas                          Kolkota                                23       5.98                                                                                                                                                            
+       165 Manish                                                                19       9.15                                                                                                                                                            
+
+10 rows selected.
+
+SQL> alter table Students modify(Name varchar(15),City varchar(15),Branch varchar(7));
+
+Table altered.
+
+SQL> select * from Students;
+
+        ID NAME            CITY                   AGE       CGPA BRANCH                                                                                                                                                                                   
+---------- --------------- --------------- ---------- ---------- -------                                                                                                                                                                                  
+       101 Ram             Bhubaneshwer            19          9                                                                                                                                                                                          
+       102 Hari            Bhubaneshwer                      6.7                                                                                                                                                                                          
+       103 Uday            Jharkhand               20       8.97                                                                                                                                                                                          
+       104 Vikas           Uttar Pradesh           19        8.5                                                                                                                                                                                          
+       105 Shweta          Ranchi                  19        9.2                                                                                                                                                                                          
+       106 Yogesh          Rajasthan               18        7.9                                                                                                                                                                                          
+       210 Smriti          Delhi                   20       8.99                                                                                                                                                                                          
+       211 Sudam           Cuttack                 21        8.6                                                                                                                                                                                          
+       212 Vikas           Kolkota                 23       5.98                                                                                                                                                                                          
+       165 Manish                                  19       9.15                                                                                                                                                                                          
+
+10 rows selected.
+
+
+SQL> update Students set Branch='CSE' where ID=101;
+
+1 row updated.
+
+SQL> select * from Students;
+
+        ID NAME            CITY                   AGE       CGPA BRANCH                                                                                                                                                                                   
+---------- --------------- --------------- ---------- ---------- -------                                                                                                                                                                                  
+       101 Ram             Bhubaneshwer            19          9 CSE                                                                                                                                                                                      
+       102 Hari            Bhubaneshwer                      6.7                                                                                                                                                                                          
+       103 Uday            Jharkhand               20       8.97                                                                                                                                                                                          
+       104 Vikas           Uttar Pradesh           19        8.5                                                                                                                                                                                          
+       105 Shweta          Ranchi                  19        9.2                                                                                                                                                                                          
+       106 Yogesh          Rajasthan               18        7.9                                                                                                                                                                                          
+       210 Smriti          Delhi                   20       8.99                                                                                                                                                                                          
+       211 Sudam           Cuttack                 21        8.6                                                                                                                                                                                          
+       212 Vikas           Kolkota                 23       5.98                                                                                                                                                                                          
+       165 Manish                                  19       9.15                                                                                                                                                                                          
+
+10 rows selected.
+
+SQL> update Students set Branch='CSE';
+
+10 rows updated.
+
+SQL> select * from Students;
+
+        ID NAME            CITY                   AGE       CGPA BRANCH                                                                                                                                                                                   
+---------- --------------- --------------- ---------- ---------- -------                                                                                                                                                                                  
+       101 Ram             Bhubaneshwer            19          9 CSE                                                                                                                                                                                      
+       102 Hari            Bhubaneshwer                      6.7 CSE                                                                                                                                                                                      
+       103 Uday            Jharkhand               20       8.97 CSE                                                                                                                                                                                      
+       104 Vikas           Uttar Pradesh           19        8.5 CSE                                                                                                                                                                                      
+       105 Shweta          Ranchi                  19        9.2 CSE                                                                                                                                                                                      
+       106 Yogesh          Rajasthan               18        7.9 CSE                                                                                                                                                                                      
+       210 Smriti          Delhi                   20       8.99 CSE                                                                                                                                                                                      
+       211 Sudam           Cuttack                 21        8.6 CSE                                                                                                                                                                                      
+       212 Vikas           Kolkota                 23       5.98 CSE                                                                                                                                                                                      
+       165 Manish                                  19       9.15 CSE                                                                                                                                                                                      
+
+10 rows selected.
+
+SQL> delete from Students where ID=101;
+
+1 row deleted.
+
+SQL> select * from Students;
+
+        ID NAME            CITY                   AGE       CGPA BRANCH                                                                                                                                                                                   
+---------- --------------- --------------- ---------- ---------- -------                                                                                                                                                                                  
+       102 Hari            Bhubaneshwer                      6.7 CSE                                                                                                                                                                                      
+       103 Uday            Jharkhand               20       8.97 CSE                                                                                                                                                                                      
+       104 Vikas           Uttar Pradesh           19        8.5 CSE                                                                                                                                                                                      
+       105 Shweta          Ranchi                  19        9.2 CSE                                                                                                                                                                                      
+       106 Yogesh          Rajasthan               18        7.9 CSE                                                                                                                                                                                      
+       210 Smriti          Delhi                   20       8.99 CSE                                                                                                                                                                                      
+       211 Sudam           Cuttack                 21        8.6 CSE                                                                                                                                                                                      
+       212 Vikas           Kolkota                 23       5.98 CSE                                                                                                                                                                                      
+       165 Manish                                  19       9.15 CSE                                                                                                                                                                                      
+
+9 rows selected.
+
+
+SQL> create table Person(Roll,Name,Age) as select ID,Name,Age from Students;
+
+Table created.
+
+SQL> select * from Person;
+
+      ROLL NAME                   AGE                                                                                                                                                                                                                     
+---------- --------------- ----------                                                                                                                                                                                                                     
+       102 Hari                                                                                                                                                                                                                                           
+       103 Uday                    20                                                                                                                                                                                                                     
+       104 Vikas                   19                                                                                                                                                                                                                     
+       105 Shweta                  19                                                                                                                                                                                                                     
+       106 Yogesh                  18                                                                                                                                                                                                                     
+       210 Smriti                  20                                                                                                                                                                                                                     
+       211 Sudam                   21                                                                                                                                                                                                                     
+       212 Vikas                   23                                                                                                                                                                                                                     
+       165 Manish                  19                                                                                                                                                                                                                     
+
+9 rows selected.
+
+SQL> select * from Students;
+
+        ID NAME            CITY                   AGE       CGPA BRANCH                                                                                                                                                                                   
+---------- --------------- --------------- ---------- ---------- -------                                                                                                                                                                                  
+       102 Hari            Bhubaneshwer                      6.7 CSE                                                                                                                                                                                      
+       103 Uday            Jharkhand               20       8.97 CSE                                                                                                                                                                                      
+       104 Vikas           Uttar Pradesh           19        8.5 CSE                                                                                                                                                                                      
+       105 Shweta          Ranchi                  19        9.2 CSE                                                                                                                                                                                      
+       106 Yogesh          Rajasthan               18        7.9 CSE                                                                                                                                                                                      
+       210 Smriti          Delhi                   20       8.99 CSE                                                                                                                                                                                      
+       211 Sudam           Cuttack                 21        8.6 CSE                                                                                                                                                                                      
+       212 Vikas           Kolkota                 23       5.98 CSE                                                                                                                                                                                      
+       165 Manish                                  19       9.15 CSE                                                                                                                                                                                      
+
+9 rows selected.
+
+SQL> insert into Person select ID,Name,Age from Students where ID=105;
+
+1 row created.
+
+SQL> select * from Person;
+
+      ROLL NAME                   AGE                                                                                                                                                                                                                     
+---------- --------------- ----------                                                                                                                                                                                                                     
+       102 Hari                                                                                                                                                                                                                                           
+       103 Uday                    20                                                                                                                                                                                                                     
+       104 Vikas                   19                                                                                                                                                                                                                     
+       105 Shweta                  19                                                                                                                                                                                                                     
+       106 Yogesh                  18                                                                                                                                                                                                                     
+       210 Smriti                  20                                                                                                                                                                                                                     
+       211 Sudam                   21                                                                                                                                                                                                                     
+       212 Vikas                   23                                                                                                                                                                                                                     
+       165 Manish                  19                                                                                                                                                                                                                     
+       105 Shweta                  19                                                                                                                                                                                                                     
+
+10 rows selected.
+
+SQL> truncate table Students;
+
+Table truncated.
+
+SQL> select * from Students;
+
+no rows selected
+
+SQL> select * from Person;
+
+      ROLL NAME                   AGE                                                                                                                                                                                                                     
+---------- --------------- ----------                                                                                                                                                                                                                     
+       102 Hari                                                                                                                                                                                                                                           
+       103 Uday                    20                                                                                                                                                                                                                     
+       104 Vikas                   19                                                                                                                                                                                                                     
+       105 Shweta                  19                                                                                                                                                                                                                     
+       106 Yogesh                  18                                                                                                                                                                                                                     
+       210 Smriti                  20                                                                                                                                                                                                                     
+       211 Sudam                   21                                                                                                                                                                                                                     
+       212 Vikas                   23                                                                                                                                                                                                                     
+       165 Manish                  19                                                                                                                                                                                                                     
+       105 Shweta                  19                                                                                                                                                                                                                     
+
+10 rows selected.
+
+SQL> delete from Person where Roll=105;
+
+2 rows deleted.
+
+SQL> select * from Person;
+
+      ROLL NAME                   AGE                                                                                                                                                                                                                     
+---------- --------------- ----------                                                                                                                                                                                                                     
+       102 Hari                                                                                                                                                                                                                                           
+       103 Uday                    20                                                                                                                                                                                                                     
+       104 Vikas                   19                                                                                                                                                                                                                     
+       106 Yogesh                  18                                                                                                                                                                                                                     
+       210 Smriti                  20                                                                                                                                                                                                                     
+       211 Sudam                   21                                                                                                                                                                                                                     
+       212 Vikas                   23                                                                                                                                                                                                                     
+       165 Manish                  19                                                                                                                                                                                                                     
+
+8 rows selected.
+
+SQL>  spool off;
