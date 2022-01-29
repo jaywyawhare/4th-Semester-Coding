@@ -1,4 +1,4 @@
-<!-- Design a user registration form in HTML for opening a social connecting account. -->
+<!-- Design a user registration form for filling KIITEE (uploading image, signaure, marksheets etc will be there). -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form</title>
     <style>
         form {
             width: 500px;
@@ -44,12 +44,27 @@
                 <td>:</td>
                 <td><input type="number" placeholder="+91" mobile =""></td>
             </tr>
-            <tr> 
-                <td>
-                    <input type="checkbox" name="Male" value="male">Male <br>
-                    <input type="checkbox" name="Female" value="Female">Female <br>
-                </td>        
+            <tr>
+                <td>Password</td>
+                <td>:</td>
+                <td><input type="password" placeholder="*******" password =""></td>
             </tr>
+            <tr>
+                <td>Marksheet</td>
+                <td>:</td>
+                <td><input type="file" marksheet =""></td>
+            </tr>
+            <tr>
+                <td>Image</td>
+                <td>:</td>
+                <td><input type="file" image =""></td>
+            </tr>
+            <tr>
+                <td>Signaure</td>
+                <td>:</td>
+                <td><input type="File" signature =""></td>
+            </tr>
+            
             <tr>
                 <td>
                     <input type="submit" value="Done">
