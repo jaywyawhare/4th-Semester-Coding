@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        form {
+           
+            width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            margin-top: 18px;
+            border: 5px solid rgb(255, 211, 13)
+            
+        
+        }
+        body {
+            background-color: rgb(189, 236, 183);
+        }
+    </style>
+</head>
+<body>
+    <form action="mailto:ultimatecoder127.0.01@gmail.com" method="post">
+        <table>
+            <tr>
+                <td>First Name</td>
+                <td>:</td>
+                <td><input type="text" placeholder="Random" name="fname"></td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td>:</td>
+                <td><input type="text" placeholder="Guy" name="lname"></td>
+            </tr>
+            <tr>
+                <td>Email Address</td>
+                <td>:</td>
+                <td><input type="text" placeholder="xyz@abc.pqr" name="email"></td>
+            </tr>
+            <tr>
+                <td>Mobile No.</td>
+                <td>:</td>
+                <td><input type="number" placeholder="+91" name="mobile"></td>
+            </tr>
+            <tr>
+                <td>Username</td>
+                <td>:</td>
+                <td><input type="text" placeholder="random" name="username"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td>:</td>
+                <td><input type="password" placeholder="*******" name="password"></td>
+            </tr>
+            <tr>
+                <td>Marksheet</td>
+                <td>:</td>
+                <td><input type="file" name="marksheet"></td>
+            </tr>
+            <tr>
+                <td>Image</td>
+                <td>:</td>
+                <td><input type="file" name="image"></td>
+            </tr>
+            <tr>
+                <td>Signaure</td>
+                <td>:</td>
+                <td><input type="file" name="signature"></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>:</td>
+                <td>
+                    <input type="radio" name="Gender" id="Male">Male
+                    <input type="radio" name="Gender" id="Female">Female
+                    <input type="radio" name="Gender" id="Others">Others
+                </td>
+            </tr> 
+            <tr>
+                <td>Age</td>
+                <td>:</td>
+                <td>
+                <select name="List" id="Age">
+                        <option>Choose One</option>
+                        <option>Not Yet born</option>
+                        <option>Just Born</option>
+                        <option>Why I am Born</option>
+                        <option>Dead</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Relationship Status</td>
+                <td>:</td>
+                <td>
+                    <select name="List" id="Age">
+                            <option>Choose One</option>
+                            <option>YOU ARE SINGLE!</option>
+                            <option>YOU ARE SINGLE!</option>
+                            <option>YOU ARE SINGLE!</option>
+                            <option>YOU ARE SINGLE!</option>
+                        </select>
+                    </td>
+            </tr>
+            <tr>
+                <td>Credit Card No</td>
+                <td>:</td>
+                <td><input type="number" placeholder="*******" name="credit">
+                </td>
+            </tr>
+            <tr>
+                <td>CVV</td>
+                <td>:</td>
+                <td><input type="number" placeholder="***" name="cvv">
+                </td>
+
+            </tr>
+            <tr>
+                <td>Expiry Date</td>
+                <td>:</td>
+                <td><input type="date" name="expiry">
+                </td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td>:</td>
+                <td><textarea name="address" id="address" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="submit" value="Done">
+                    <input type="reset" value="Reset">
+                </td>
+
+            </tr>
+            
+        </table>
+    </form>
+</body>
+</html>
