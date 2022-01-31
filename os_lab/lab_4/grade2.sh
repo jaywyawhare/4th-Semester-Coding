@@ -17,7 +17,7 @@ case $num in
 		echo "B"
 		;;
     [5][0-9])
-		echo "You are Failed, F for you"
+		echo "You are Failed, F for you!"
 		;;            
 	*)
 		echo "Invalid number"
