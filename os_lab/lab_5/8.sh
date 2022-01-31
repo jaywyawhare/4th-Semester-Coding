@@ -2,15 +2,26 @@
 #for example: 123 = one two three
 
 #!/bin/bash
-read -p "Enter a number: " num
-
-
-#use wordcout to find the length of the number
-length=`echo $num | wc -c`
-length=`expr $length - 1`
-
-for (( i=1; i<=$length; i++ ))
+read -p "Enter a no. : " x
+rev=""
+word=""
+temp=$x
+while [ $x -gt 0 ]
 do
-    digit=`echo $num
-    digit=`expr substr $num $i 1`
-    
+    case $(( $x % 10 )) in
+        1) word="one" ;;
+        2) word="two" ;;
+        3) word="three" ;;
+        4) word="four" ;;
+        5) word="five" ;;
+        6) word="six" ;;
+        7) word="seven" ;;
+        8) word="eight" ;;
+        9) word="nine" ;;
+        0) word="zero" ;;
+        *) echo "Invalid Char." ;;
+    esac
+    x=$(( $x / 10 ))
+    rev=$( echo "${word} ${rev}" ) 
+done
+echo "$rev"
