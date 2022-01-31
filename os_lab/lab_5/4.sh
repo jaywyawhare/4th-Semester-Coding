@@ -2,9 +2,10 @@
 
 #!/bin/bash
 
+echo "Disclaimer :- Terminal is scared of prime numbers so it will not show output for prime numbers."
+
 read -p "Enter a number: " num
 
-echo "Terminal is scared of prime numbers wo it will not show output for prime numbers."
 
 for (( i=2; i<=num/2; i++ ))
 do
