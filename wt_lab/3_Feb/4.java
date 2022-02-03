@@ -18,3 +18,4 @@ public class 4 {
             System.out.println("Grade: F for you!");
         }
     }
+}
