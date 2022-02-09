@@ -1,11 +1,11 @@
 # WAP to find the mean, median and standard deviation of a list of numbers in array.
 
-#!/bin/sh
 
 echo "====================================================================================="
 echo "ONLINE COMPILOR SUCKS! USE LINUX OS!"
 echo "====================================================================================="
 
+#!/bin/sh
 mkdir tmp
 touch tmp/mean.c
 touch tmp/median.c
@@ -118,6 +118,7 @@ then
     sudo reboot
 else
     echo "Invalid choice!"
+    rm -rf tmp
 fi
 
 
