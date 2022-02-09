@@ -23,9 +23,14 @@ do
     read a[$i]
 done
 
-echo "After swapping:  "
-
-for (( i=$n; i>=0; i-- ))
+for (( i=0; i<$n; i++ ))
 do
-    echo ${a[$i]}
+    for (( j=$i+1; j<$n; j++ ))
+    do
+        temp=${a[$i]}
+        a[$i]=${a[$j]}
+        a[$j]=$temp
+    done
 done
+echo "After swapping:  "
+echo "${a[@]}"
