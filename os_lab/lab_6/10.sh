@@ -1,11 +1,11 @@
 # WAP to find the mean, median and standard deviation of a list of numbers in array.
 
 
+#!/bin/sh
 echo "====================================================================================="
 echo "ONLINE COMPILOR SUCKS! USE LINUX OS!"
 echo "====================================================================================="
 
-#!/bin/sh
 mkdir tmp
 touch tmp/mean.c
 touch tmp/median.c
@@ -13,7 +13,7 @@ touch tmp/stddev.c
 
 echo "#include <stdio.h>" >> tmp/mean.c
 echo "#include <math.h>" >> tmp/mean.c
-echo "int main()" >> tmp/mean.c
+echo "int main()" >> tmp/means.c
 echo "{" >> tmp/mean.c
 echo "    int i;" >> tmp/mean.c
 echo "    int sum = 0;" >> tmp/mean.c
