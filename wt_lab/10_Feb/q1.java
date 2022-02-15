@@ -3,21 +3,11 @@
 import java.util.Scanner;
 public class q1 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the Numbers : ");
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-        int c = sc.nextInt();
+        int a = Integer.parseInt(args[0]);
+        int b = Integer.parseInt(args[1]);
+        int c = Integer.parseInt(args[2]);
 
-        
-        int max = a;
-        if (b > max) {
-            max = b;
-        }
-        if (c > max) {
-            max = c;
-        }
-        System.out.println("The largest number is : " + max);
-
+        int max = a>b ? (a>c ? a:c) : (b>c ? b:c);
+        System.out.println("Largest number is " + max);
     }
 }

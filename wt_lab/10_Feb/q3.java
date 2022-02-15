@@ -32,7 +32,8 @@ class Demo {
 
 public class q3 {
     public static void main(String[] args) {
-        new Demo().printData();
+        Demo d = new Demo();
+        d.printData();
 
     }
 }

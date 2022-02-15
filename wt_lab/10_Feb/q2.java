@@ -4,26 +4,17 @@ import java.util.Scanner;
 
 public class q2 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the Numbers : ");
-        //add the numbers in array
-        int[] arr = new int[10];
-        for (int i = 0; i < 10; i++) {
-            arr[i] = sc.nextInt();
-        }
+        int count_even = 0;
+        int count_odd = 0;
 
-        //find even number
-        for (int i = 0; i < 10; i++) {
-            if (arr[i] % 2 == 0) {
-                System.out.println("Even Number : " + arr[i]);
-                System.out.println("number of even numbers : " + (i + 1));
+        for(int i =0; i<10; i++) {
+            int num = Integer.parseInt(args[i]);
+            if(num%2 == 0) {
+                count_even++;
+            } else {
+                count_odd++;
             }
+            System.out.println("Number of even and odd numers persent given input is " + count_even + " and " + count_odd + " respectively");
         }
-        for (int i = 0; i < 10; i++) {
-            if (arr[i] % 2 != 0) {
-                System.out.println("Odd Number : " + arr[i]);
-                System.out.println("number of odd numbers : " + (i + 1));
-            }
-        } 
     }
 }

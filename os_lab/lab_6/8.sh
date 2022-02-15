@@ -1,6 +1,5 @@
 # WAP to swap first element with last, second element with second last and so on, stored in an array.
 
-#!/bin/sh
 
 # echo "Only valid for single digit inputs"
 
@@ -16,6 +15,7 @@
 
 # =================================================================================================================
 
+#!/bin/sh
 read -p "Enter the number of elements in the array: " n
 echo "Enter the elements of the array: "
 for (( i=0; i<$n; i++ ))
