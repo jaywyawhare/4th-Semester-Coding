@@ -12,24 +12,34 @@
 // "Success" or "Failure" message based on result of validation
 
 import java.util.Scanner;
-import java.util.regex.Matcher;
 
 public class q5 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter USN: ");
         String usn = sc.nextLine();
-        System.out.println("USN: " + usn);
-        System.out.println("USN Validation Result: " + validateUSN(usn));
-    }
-    
-    public static String validateUSN(String usn) {
-        String regex = "^[1-2][A-Z][A-Z][0-9][A-Z][A-Z][0-9][0-9][0-9][0-9]$";
-        Matcher matcher = Pattern.compile(regex).matcher(usn);
-        if (matcher.matches()) {
-            return "Success";
-        } else {
-            return "Failure";
+        char[] usnArray = usn.toCharArray();
+        if(usnArray.length == 10){
+            if(Character.isDigit(usnArray[0]) && (usnArray[0] == '1' || usnArray[0] == '2')){
+                if(Character.isUpperCase(usnArray[5]) && Character.isUpperCase(usnArray[6]) && (usnArray[5] == 'C' && usnArray[6] == 'S' || usnArray[5] == 'I' && usnArray[6] == 'S' || usnArray[5] == 'E' && usnArray[6] == 'C' || usnArray[5] == 'M' && usnArray[6] == 'E')) {
+                    if(Character.isDigit(usnArray[7]) && Character.isDigit(usnArray[8]) && Character.isDigit(usnArray[9])){
+                        System.out.println("Success");
+                    }
+                    else{
+                        System.out.println("Failure");
+                    }
+                }
+                else{
+                    System.out.println("Failure");
+                }
+            }
+            else{
+                System.out.println("Failure");
+            }
         }
+        else{
+            System.out.println("Failure");
+        }
+
     }
 }
