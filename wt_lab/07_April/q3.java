@@ -5,8 +5,8 @@
 //     iv) Insert one string into another string
 
 import java.util.Scanner;
-import java.util.regex.Matcher;
-
+//java library stringbuffer class
+import java.lang.StringBuffer;
 public class q3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
