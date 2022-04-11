@@ -1,4 +1,4 @@
-#Find square and cube of a number in plsql
+-- Find square and cube of a number in plsql
 
 Declare
     num number;

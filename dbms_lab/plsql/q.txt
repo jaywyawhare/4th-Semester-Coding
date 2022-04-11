@@ -1,0 +1,16 @@
+1. Write a PLSQL program to display Largest among 3 numbers.
+2. Write a PLSQL program to display sum and average of 5 numbers.
+3. Write a PLSQL program to display square and cube of a number.
+4. Write a PLSQL program to check the age of a person is eligible to vote or not.
+5. Write a PLSQL program to check the amount entered in rupees is multiples of hundred or not.
+6. Write a PLSQL program to display smallest among 4 numbers.
+7. Write a PLSQL program to check the entered number is Prime number or not.
+8. Write a PLSQL program to display the average number of records of any database table.
+9. Write a PLSQL program to display the product of 2 numbers without multiplication.
+10. Write a PLSQL program to sum of all the numbers from 1 to n.
+11. Write a PLSQL program to accept the name of a student and display it in Upper case and
+Lowercase.
+12. Write a PLSQL program to display all the odd numbers within a given range.
+13. Write a PLSQL program to display multiplication table up to 10 for a given number.
+14. Write a PLSQL program to display the sum of every digit of a given number.
+15. Write a PLSQL program to check the given number is Palindrome or not.

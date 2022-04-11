@@ -1,5 +1,4 @@
-#find sum and avarage of 5 numbers 
-#answer in plsql
+-- find sum and avarage of 5 numbers 
 
 
 Declare 

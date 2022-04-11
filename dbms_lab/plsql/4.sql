@@ -1,4 +1,4 @@
-#if age is greater than 18 and you are M then you can vote plsql
+-- if age is greater than 18 and you are M then you can vote plsql
 
 Declare
     age number;
